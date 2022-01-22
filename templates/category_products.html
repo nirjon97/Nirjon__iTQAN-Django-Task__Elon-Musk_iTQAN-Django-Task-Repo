@@ -1,0 +1,152 @@
+{%load static%}
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Christ - Christmas Gift Shop HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{%static ''%}img/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"> 
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{%static ''%}css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{%static ''%}css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static ''%}css/ionicons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{%static ''%}css/plugins.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{%static ''%}css/style.css">
+    <!-- Modernizer JS -->
+    <script src="{%static ''%}js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+
+	   <!-- header files-->
+	   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hi! login name</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!--nav end-->
+
+<!--main body start-->
+
+    <!-- Product Section Start-->
+    <div class="product-section section pt-70 pb-60">
+      <div class="container">
+         
+          <!-- Section Title Start-->
+          <div class="row">
+              <div class="section-title text-center col mb-60">
+                  <h1>All Category</h1>
+              </div>
+          </div><!-- Section Title End-->
+          
+          <!-- Product Wrapper Start-->
+          <div class="row">
+              
+              <!-- Product Start-->
+          {% for p in product %}
+              <div class="col-lg-4 col-md-6 col-12 mb-60">
+                 
+                  <div class="product">
+
+                      <!-- Image Wrapper -->
+                      <div class="image">
+                          <!-- Image -->
+                          <a href="#" class="img"><img src="{{p.ImageUrl}}" alt="Product"></a>
+                          <!-- Wishlist -->
+                      </div>
+                      
+                      <!-- Content -->
+                      <div class="content">
+                          
+                          <!-- Head Content -->
+                          <div class="head fix">
+                             
+                              <!-- Title & Category -->
+                              <div class="title-category float-left">
+                                  <h5 class="title"><a href="#">{{p.title}}</a></h5>
+                                  <a href="shop.html" class="category">Catagory</a>
+                              </div>
+  
+                              
+                              
+                          </div>
+                          
+                          <!-- Action Button -->
+                          <div class="action-button fix">
+                              <a href="{%url 'product_details' p.category.slug p.slug%}">show here</a>
+                          </div>
+                          
+                      </div>
+
+                  </div>
+                  
+              </div><!-- Product End-->
+            {% endfor %}
+
+
+           
+
+    
+       
+
+    
+       
+    <!-- Footer Section Start-->
+
+    <!-- Footer Section end-->
+
+</div><!-- Main Wrapper End -->
+
+<!--main body end-->
+
+
+
+
+
+
+
+
+
+      <script src="{%static ''%}js/vendor/jquery-1.12.0.min.js"></script>
+<!-- Popper JS -->
+<script src="{%static ''%}js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="{%static ''%}js/bootstrap.min.js"></script>
+<!-- Plugins JS -->
+<script src="{%static ''%}js/plugins.js"></script>
+<!-- Ajax Mail JS -->
+<script src="{%static ''%}js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="{%static ''%}js/main.js"></script>
+</body>
+
+</html>
