@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Christ - Christmas Gift Shop HTML Template</title>
+    <title>E-commerce</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -33,7 +33,7 @@
 	   <!-- header files-->
      
 	   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{%url 'home' %}">Ecom_app </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,15 +42,12 @@
             <li class="nav-item active">
               <a class="nav-link" href="{%url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hi! login name</a>
-            </li>
+
+
+              <li class="nav-item">
+                 <a class="nav-link" href="{%url 'user_logout'%}">Logout</a>
+              </li>
+
           </ul>
         </div>
       </nav>
@@ -128,7 +125,7 @@
                                 <!-- Title & Category -->
                                 <div class="title-category float-left">
                                     <h5 class="title"><a href="{%url 'category_product' p.slug%}">{{p.title}}</a></h5>
-                                    <a href="shop.html" class="category">Catagory</a>
+                                    <a href="#" class="category">Catagory</a>
                                 </div>
     
                                 

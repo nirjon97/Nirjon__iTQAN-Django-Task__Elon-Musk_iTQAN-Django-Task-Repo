@@ -32,7 +32,11 @@
    <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>{{product.title}}</h1>
+            
+                <div class="section-title text-center col mb-60">
+                    <h1>{{product.title}}</h1>
+                </div>
+        
             <hr>
                                    <!-- Image Wrapper -->
                                    <div class="col-lg-4 col-md-6 col-12 mb-60">
@@ -42,11 +46,11 @@
                                 </div>
                                 <hr>
                                 <hr>
-                                <h1>price : {{product.new_price}} </h1>
+                                <h1 class="col-md-6 offset-md-3" >price : {{product.new_price}} </h1>
                                 
                                 <hr>
                                 <hr>
-                                <h2>Description : <hr> </h2>
+                                <h2 class="col-md-6 offset-md-3">Description : <hr> </h2>
                                 <h3>{{product.detail}}</h3>
         </div>
        
